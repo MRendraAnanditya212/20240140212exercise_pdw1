@@ -1,0 +1,178 @@
+/* --- Reset & Dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Menggunakan font Roboto untuk teks badan, Changa One untuk heading */
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0a0a; /* Hitam pekat khas GTA */
+    color: #eeeeee; /* Putih keabuan agar tidak terlalu menyala */
+    line-height: 1.8;
+}
+
+/* --- Layout Utility --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Logo --- */
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    border-bottom: 3px solid #fbc02d; /* Kuning emas khas GTA */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Changa One', cursive; /* Font bergaya kartun/gta */
+    font-size: 2.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.highlight {
+    color: #fbc02d; /* Warna aksen kuning */
+}
+
+/* --- Section Styling --- */
+.content-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+}
+
+/* Membalik urutan teks dan gambar untuk variasi */
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.image-block {
+    flex: 1;
+}
+
+/* --- Typography --- */
+h2 {
+    font-family: 'Changa One', cursive;
+    font-size: 2.2rem;
+    color: #fbc02d;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Changa One', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* --- Image Styling --- */
+.gta-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; /* Sedikit lengkungan */
+    border: 2px solid #333; /* Frame gelap */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efek interaktif pada gambar saat kursor di atasnya */
+.gta-img:hover {
+    transform: scale(1.03);
+    border-color: #fbc02d;
+}
+
+.shadow-effect {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* --- Divider --- */
+.gta-divider {
+    border: 0;
+    height: 2px;
+    background-color: #fbc02d;
+    margin: 40px 0;
+    opacity: 0.5;
+}
+
+/* --- Action Section & Button --- */
+.action-section {
+    background-color: #1a1a1a;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin: 60px 0;
+}
+
+.gta-button {
+    font-family: 'Changa One', cursive;
+    background-color: #fbc02d; /* Kuning */
+    color: #000; /* Teks hitam */
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 0 #c79100; /* Efek 3D tombol */
+    margin-top: 20px;
+}
+
+/* Efek saat tombol ditekan */
+.gta-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #c79100;
+}
+
+.gta-button:hover {
+    background-color: #ffeb3b; /* Kuning lebih terang */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a1a1a;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #333;
+}
+
+/* --- Media Queries untuk Responsif (Mobile) --- */
+@media (max-width: 768px) {
+    .content-section, .content-section.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1.logo {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .image-block {
+        margin-top: 20px;
+    }
+}
